@@ -9,8 +9,13 @@ body{
 #navbar{
   background-color: transparent;
   padding-top: 20px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0); 
 }
 
+#navbar.hidden{
+  transform: translateY(-100%);
+}
 
 @media(max-width: 768px){
   #nav-content{
@@ -18,5 +23,29 @@ body{
     justify-content: end;
     margin-right: 20px;
   }
+}
+
+
+
+#parallax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/public/glass\ depth-3.png),  url(/public/glass\ depth-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 50%;
+  
+}
+h1 {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Arial";
+  text-transform: uppercase;
+  opacity: .2;
+  font-size: 70px;
 }
 
