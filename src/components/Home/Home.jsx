@@ -1,4 +1,5 @@
 import React, {useEffect, useRef} from 'react'
+import { LinearGradient } from 'react-text-gradients'
 
 function Home() {
 
@@ -33,8 +34,15 @@ function Home() {
   return (
     <div>
       {/* do not forget to add the reference and change the id */}
-      <div id="home" >
-        <h1><span style={{fontSize: "30px"}}>This is </span><br/><span style={{fontWeight:"bold"}}>Nikhil Pulluri</span></h1>
+      <div id="home"  >
+        <div  style={{fontWeight: "bold", opacity: "0.4", marginTop: "200px"}}>Hello There!</div>
+        <div  style={{fontWeight: "bold", opacity: "0.4", marginTop: "100px"}}>This is</div>
+        {/* <div className='intro' >NIKHIL PULLURI</div> */}
+        <div style={{fontWeight: "bold"}}>
+          <LinearGradient gradient={['to left', '#00f ,#f0f']}>
+            Nikhil Pulluri
+          </LinearGradient>
+        </div>
       </div>
     </div>
   )
