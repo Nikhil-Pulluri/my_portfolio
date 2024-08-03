@@ -44,7 +44,7 @@ function Home() {
         <div  style={{fontWeight: "bold", opacity: "0.4", marginTop: "100px"}}>This is</div>
         {/* <div className='intro' >NIKHIL PULLURI</div> */}
         <div style={{fontWeight: "bold"}}>
-          <LinearGradient gradient={['to left', '#00f ,#f0f']}>
+          <LinearGradient gradient={['to right', '#00f ,#f0f']}>
             Nikhil Pulluri
           </LinearGradient>
         </div>
