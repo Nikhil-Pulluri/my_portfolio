@@ -1,8 +1,23 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useState,useEffect, useRef} from 'react'
 import { LinearGradient } from 'react-text-gradients'
 import ParticleBackground from '../Particles/ParticleBackground'
+import Intro from './Intro'
 
 function Home() {
+
+  const [show, setShow] = useState(false)
+
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShow(true);
+    }, 1000);
+
+    // Cleanup function to clear timeout if the component unmounts
+    return () => clearTimeout(timer);
+  }, []);
+
+
 
   // const parallaxRef = useRef(null)
 
@@ -36,18 +51,26 @@ function Home() {
     <>
 
 
-    <div>
-      {/* do not forget to add the reference and change the id */}
+    <div style={{display: "flex", width: "100%"}}>
       <ParticleBackground/>
       <div id="home"  >
-        <div  style={{fontWeight: "bold", opacity: "0.4", marginTop: "200px"}}>Hello There!</div>
-        <div  style={{fontWeight: "bold", opacity: "0.4", marginTop: "100px"}}>This is</div>
-        {/* <div className='intro' >NIKHIL PULLURI</div> */}
-        <div style={{fontWeight: "bold"}}>
-          <LinearGradient gradient={['to right', '#00f ,#f0f']}>
-            Nikhil Pulluri
-          </LinearGradient>
+        <div  style={{fontWeight: "bold", marginTop: "200px"}}>Hello!</div>
+        {show && (
+        <div className='fadeIn'>
+          <div  style={{fontWeight: "bold", opacity: "0.4", marginTop: "100px"}}>This is</div>
+          <div style={{fontWeight: "bold"}}>
+            <LinearGradient gradient={['to right', '#00f ,#f0f']}>
+              Nikhil Pulluri
+            </LinearGradient>
+          </div>
         </div>
+        )}
+
+        
+      </div>
+
+      <div className='intro'>
+      <Intro/>
       </div>
     </div>
     </>

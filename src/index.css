@@ -5,6 +5,7 @@
 body{
   background-color: #1a1a1a;
   font-family: 'Open Sans';
+  user-select: none;
 }
 
 #navbar{
@@ -50,8 +51,30 @@ body{
   left: 30%;
   transform: translate(-50%, -50%);
   color: white;
-  /* text-transform: uppercase; */
   font-size: 70px;
+}
+
+.intro{
+  color: white;
+  font-size: 70px;
+  position: absolute;
+  top: 60%;
+  left: 60%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-in;
 }
 
 

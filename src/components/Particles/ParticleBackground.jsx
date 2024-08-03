@@ -78,7 +78,7 @@ const ParticleBackground = () => {
               number: {
                 density: {
                   enable: true,
-                  area: 800,
+                  area: 1080,
                 },
                 value: 80,
               },
@@ -89,7 +89,7 @@ const ParticleBackground = () => {
                 type: "circle",
               },
               size: {
-                value: { min: 1, max: 5 },
+                value: { min: 1, max: 4 },
               },
             },
             detectRetina: true,
