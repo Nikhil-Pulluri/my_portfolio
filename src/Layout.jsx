@@ -9,7 +9,10 @@ function Layout() {
     <>
       <Navbar/>
       <Home/>
-      <Footer/>
+      <div
+      style={{backgroundColor: "#1a1a1a",height: "auto", padding: "100px", zIndex: "1"}}
+      ><Footer/>
+      </div>
     </>
   )
 }

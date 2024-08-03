@@ -47,9 +47,9 @@ body{
   gap: 5px; */
 
   position: absolute;
-  top: 37%;
-  left: 30%;
-  transform: translate(-50%, -50%);
+  top: 3%;
+  left: 15%;
+  /* transform: translate(-50%, -50%); */
   color: white;
   font-size: 70px;
 }

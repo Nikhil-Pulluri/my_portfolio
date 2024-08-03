@@ -22,81 +22,91 @@ const ParticleBackground = () => {
   return (
     <>
       {init && (
-        <Particles
-          id="tsparticles"
-          particlesLoaded={particlesLoaded}
-          options={{
-            background: {
-              color: {
-                value: "#1a1a1a",
-              },
-            },
-            fpsLimit: 120,
-            interactivity: {
-              events: {
-                onClick: {
-                  enable: true,
-                  mode: "push",
+        <div style={{ 
+          position: 'relative', 
+          top: 0, 
+          left: 0, 
+          width: '100%', 
+          height: '100vh',
+          overflow: "hidden", 
+          zIndex: -1 
+        }}>
+          <Particles
+            id="tsparticles"
+            particlesLoaded={particlesLoaded}
+            options={{
+              background: {
+                color: {
+                  value: "#1a1a1a",
                 },
-                onHover: {
+              },
+              fpsLimit: 120,
+              interactivity: {
+                events: {
+                  onClick: {
+                    enable: true,
+                    mode: "push",
+                  },
+                  onHover: {
+                    enable: false,
+                    mode: "repulse",
+                  },
+                  resize: true,
+                },
+                modes: {
+                  push: {
+                    quantity: 2,
+                  },
+                  repulse: {
+                    distance: 100,
+                    duration: 0.4,
+                  },
+                },
+              },
+              particles: {
+                color: {
+                  value: "#ffffff",
+                },
+                links: {
+                  color: "#ffffff",
+                  distance: 150,
                   enable: false,
-                  mode: "repulse",
+                  opacity: 0.5,
+                  width: 1,
                 },
-                resize: true,
-              },
-              modes: {
-                push: {
-                  quantity: 2,
-                },
-                repulse: {
-                  distance: 100,
-                  duration: 0.4,
-                },
-              },
-            },
-            particles: {
-              color: {
-                value: "#ffffff",
-              },
-              links: {
-                color: "#ffffff",
-                distance: 150,
-                enable: false,
-                opacity: 0.5,
-                width: 1,
-              },
-              move: {
-                direction: "none",
-                enable: true,
-                outModes: {
-                  default: "bounce",
-                },
-                random: true,
-                speed: 2,
-                straight: false,
-              },
-              number: {
-                density: {
+                move: {
+                  direction: "none",
                   enable: true,
-                  area: 1080,
+                  outModes: {
+                    default: "bounce",
+                  },
+                  random: true,
+                  speed: 2,
+                  straight: false,
                 },
-                value: 80,
+                number: {
+                  density: {
+                    enable: true,
+                    area: 1080,
+                  },
+                  value: 80,
+                },
+                opacity: {
+                  value: 0.5,
+                },
+                shape: {
+                  type: "circle",
+                },
+                size: {
+                  value: { min: 1, max: 4 },
+                },
               },
-              opacity: {
-                value: 0.5,
-              },
-              shape: {
-                type: "circle",
-              },
-              size: {
-                value: { min: 1, max: 4 },
-              },
-            },
-            detectRetina: true,
-          }
+              detectRetina: true,
+            }
           
-          }
-        />
+            }
+          />
+        </div>
       )}
     </>
   );
