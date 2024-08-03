@@ -39,17 +39,17 @@ const ParticleBackground = () => {
                   mode: "push",
                 },
                 onHover: {
-                  enable: true,
+                  enable: false,
                   mode: "repulse",
                 },
                 resize: true,
               },
               modes: {
                 push: {
-                  quantity: 4,
+                  quantity: 2,
                 },
                 repulse: {
-                  distance: 200,
+                  distance: 100,
                   duration: 0.4,
                 },
               },
@@ -71,8 +71,8 @@ const ParticleBackground = () => {
                 outModes: {
                   default: "bounce",
                 },
-                random: false,
-                speed: 6,
+                random: true,
+                speed: 2,
                 straight: false,
               },
               number: {
@@ -93,7 +93,9 @@ const ParticleBackground = () => {
               },
             },
             detectRetina: true,
-          }}
+          }
+          
+          }
         />
       )}
     </>
