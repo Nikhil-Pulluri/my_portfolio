@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 import { LinearGradient } from 'react-text-gradients'
+import ParticleBackground from '../Particles/ParticleBackground'
 
 function Home() {
 
@@ -32,8 +33,12 @@ function Home() {
 
 
   return (
+    <>
+
+
     <div>
       {/* do not forget to add the reference and change the id */}
+      <ParticleBackground/>
       <div id="home"  >
         <div  style={{fontWeight: "bold", opacity: "0.4", marginTop: "200px"}}>Hello There!</div>
         <div  style={{fontWeight: "bold", opacity: "0.4", marginTop: "100px"}}>This is</div>
@@ -45,6 +50,7 @@ function Home() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
