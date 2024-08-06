@@ -11,8 +11,10 @@ body{
 #navbar{
   background-color: transparent;
   padding-top: 20px;
-  transition: transform 0.3s ease-in-out;
-  transform: translateY(0); 
+  /* transition: transform 0.3s ease-in-out;
+  transform: translateY(0);  */
+  
+  transition: top 0.3s;
 }
 
 #navbar.hidden{

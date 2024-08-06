@@ -11,7 +11,7 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(true);
-    }, 1000);
+    }, 500);
 
     // Cleanup function to clear timeout if the component unmounts
     return () => clearTimeout(timer);
