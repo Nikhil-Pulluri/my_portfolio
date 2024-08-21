@@ -1,23 +1,41 @@
-import React from 'react'
-let lastScrollTop = 0;
-const navbar = document.getElementById('navbar');
+import React, {useEffect, useState} from 'react'
 
-window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-  if (scrollTop > lastScrollTop) {
-    // Scrolling down
-    navbar.style.top = '-70px'; // Adjust the value based on your navbar height
-  } else {
-    // Scrolling up
-    navbar.style.top = '0';
-  }
-
-  lastScrollTop = scrollTop;
-});
 
 
 function Navbar() {
+
+  // const [scrollTop, setScrollTop] = useState(0)
+
+  
+useEffect(()=>{
+  let lastScrollTop = 0
+
+  const navbar = document.getElementById('navbar')
+
+  const handleScroll = ()=> {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+
+
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down
+      navbar.style.top = '-70px'; // Adjust the value based on your navbar height
+    } else {
+      // Scrolling up
+      navbar.style.top = '0';
+    }
+
+    lastScrollTop = scrollTop;
+  }
+
+  window.addEventListener('scroll', handleScroll);
+
+  return ()=> {
+    window.removeEventListener('scroll', handleScroll)
+  }
+
+}, [])
   return (
     <div>
       
