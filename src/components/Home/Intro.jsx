@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 function Intro() {
   const TypingEffect = () => {
     const [text, setText] = useState('');
-    const actualText = "I'm a Full Stack Developer with a strong foundation in creating robust and scalable web applications. With a keen eye for detail and a relentless drive for excellence, I specialize in both front-end and back-end development, ensuring a seamless user experience and efficient functionality.";
+    const actualText = "I'm a Full Stack Developer skilled in building scalable web applications, specializing in front-end and back-end development to deliver efficient functionality and seamless user experiences.";
     const speed = 13; // Inversely proportional to typing speed
     const startDelay = 500; // Delay before typing starts (in milliseconds)
 

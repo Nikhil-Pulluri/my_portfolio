@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   background-color: #1a1a1a;
   font-family: 'Open Sans';
@@ -77,6 +81,14 @@ body{
 
 .fadeIn {
   animation: fadeIn 1s ease-in;
+}
+
+#profile{
+  margin-left: 250px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
 }
 
 

@@ -61,7 +61,7 @@ function Home() {
           <div className='fadeIn'>
             <div  style={{fontWeight: "bold", opacity: "0.4", marginTop: "100px"}}>This is</div>
             <div style={{fontWeight: "bold"}}>
-              <LinearGradient gradient={['to right', '#00f ,#f0f']}>
+              <LinearGradient gradient={['to right', '#e44f4f ,#9b50bb,#0093ff']}>
                 Nikhil Pulluri
               </LinearGradient>
             </div>
