@@ -8,7 +8,7 @@ function About() {
       </center>
 
       <div id='profile'>
-        <div><img style={{height: "250px", width: "250px"}} src="/public/beluga.jpg" alt="meh" /></div>
+        <div><img style={{height: "250px", width: "250px"}} src="/beluga.jpg" alt="meh" /></div>
         <div style={{width: "700px"}}>
           <p style={{textAlign: "justify", color: "white"}}>Hi, I'm Nikhil Pulluri, a passionate Full Stack Developer specializing in building modern, scalable web applications. With a solid foundation in both front-end and back-end technologies, I thrive on creating seamless user experiences while ensuring efficient, robust functionality.
 
