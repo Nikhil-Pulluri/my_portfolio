@@ -1,13 +1,10 @@
 import React, {useEffect} from 'react'
 
-
-
-
 function Navbar() {
 
   
 useEffect(()=>{
-  let lastScrollTop = 0
+
 
   const navbar = document.getElementById('navbar')
 
@@ -16,16 +13,16 @@ useEffect(()=>{
 
 
 
-    if (scrollTop > lastScrollTop) {
+
+    if (scrollTop > 70) {
       // Scrolling down
       navbar.style.top = '-70px'; // Adjust the value based on your navbar height
     } else {
       // Scrolling up
-      // try to slower the animation when scrolling up
-      navbar.style.top = '0';
+
+      navbar.style.top = '0px';
     }
 
-    lastScrollTop = scrollTop;
   }
 
   window.addEventListener('scroll', handleScroll);

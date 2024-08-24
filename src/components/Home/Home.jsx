@@ -53,26 +53,36 @@ function Home() {
     <ParticleBackground/>
       <div> {/*adding relative position to the particle  */}
             
-        <div id="home"  >
-      
 
-          {show && (<div className='fadeIn' style={{fontWeight: "bold", marginTop: "200px"}}>Hello!</div>)}
-          {show && (
-          <div className='fadeIn'>
-            <div  style={{fontWeight: "bold", opacity: "0.4", marginTop: "100px"}}>This is</div>
-            <div style={{fontWeight: "bold"}}>
-              <LinearGradient gradient={['to right', '#e44f4f ,#9b50bb,#0093ff']}>
-                Nikhil Pulluri
-              </LinearGradient>
+          <div id="home"  >
+
+                  
+
+            {show && (<div className='fadeIn' style={{fontWeight: "bold", marginTop: "200px"}}>Hello!</div>)}
+
+            {show && (
+            <div className='fadeIn'>
+              <div  style={{fontWeight: "bold", opacity: "0.4", marginTop: "50px"}}>This is</div>
+              <div style={{fontWeight: "bold"}}>
+                <LinearGradient gradient={['to right', '#e44f4f ,#9b50bb,#0093ff']}>
+                  Nikhil Pulluri
+                </LinearGradient>
+              </div>
             </div>
+            )}
+
+
+
           </div>
-          )}
-      
-        </div>
-        <div className='intro'>
-        <Intro/>
-        </div>
-      </div>
+
+
+          <div className='intro'>
+          <Intro/>
+          </div>
+
+        </div> 
+
+
     </div>
     </>
   )

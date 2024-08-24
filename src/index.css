@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html{
   scroll-behavior: smooth;
 }
@@ -64,8 +65,8 @@ body{
   color: white;
   font-size: 70px;
   position: absolute;
-  top: 60%;
-  left: 60%;
+  top: 75%;
+  left: 15%;
 }
 
 @keyframes fadeIn {
@@ -80,7 +81,7 @@ body{
 }
 
 .fadeIn {
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn 0.5s ease-in;
 }
 
 #profile{
@@ -90,6 +91,30 @@ body{
   flex-direction: row;
   gap: 50px;
 }
+
+#contactHome{
+  border: none;
+  box-shadow: 5px;
+
+  border-radius: 8px;
+  color: white;
+  background-color: #1a1a1a;
+  width: 300px;
+  height: auto;
+  padding: 20px 30px;
+}
+
+#social:hover{
+  background-color: white;
+  color: black;
+  font-weight: 400;
+
+  transition: 0.2s ease-in;
+}
+
+
+
+
 
 
 

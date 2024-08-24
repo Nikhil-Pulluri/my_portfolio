@@ -7,24 +7,29 @@ function About() {
         <h1 style={{color: "white", fontSize: "60px", fontWeight: "bold"}}>About Me</h1>
       </center>
 
-      <div id='profile'>
-        <div><img style={{height: "250px", width: "250px"}} src="/beluga.jpg" alt="meh" /></div>
-        <div style={{width: "700px"}}>
-          <p style={{textAlign: "justify", color: "white"}}>Hi, I'm Nikhil Pulluri, a passionate Full Stack Developer specializing in building modern, scalable web applications. With a solid foundation in both front-end and back-end technologies, I thrive on creating seamless user experiences while ensuring efficient, robust functionality.
+              <div id='profile'>
+                <div><img style={{height: "250px", width: "250px", borderRadius: "50%"}} src="/beluga.jpg" alt="meh" /></div>
+                <div style={{width: "700px"}}>
+                <p style={{textAlign: "justify", color: "white"}}>
+                Hey there! I'm <span style={{fontWeight: "bold"}}>Nikhil Pulluri</span>, a Full Stack Web3 Developer who’s all about building decentralized, modern applications. I love combining front-end and back-end skills with blockchain technology to create secure and scalable solutions that are future-ready.
 
-          <br/>
-          <br/>
+                <br/><br/>
 
-            I'm persuing a BTech degree in Computer Science and Engineering at SRM Univerity AP, Andhra Pradesh, and over the past few years, I've gained experience working with various web technologies, including JavaScript, React, Node.js, and Firebase. My passion for coding comes from the ability to solve complex problems and turn creative ideas into reality through elegant code.
+                I'm currently pursuing a BTech in Computer Science and Engineering at SRM University AP, Andhra Pradesh. Along the way, I've dived into JavaScript, React, Node.js, Solidity, Ethereum, and more. What excites me about Web3 is the chance to solve complex challenges and bring innovative ideas to life through smart contracts and decentralized apps (dApps).
 
-            <br/>
-            <br/>
+                <br/><br/>
 
-            Outside of work, I'm always exploring the latest trends in tech, contributing to open-source projects, and working on side projects that challenge me to grow as a developer. When I'm not coding, you'll likely find me playing Call Of Duty Mobile 😅, Solving DSA and watching Movies.
-            
-</p>
-        </div>
-      </div>
+                When I'm not knee-deep in code, you'll find me geeking out on the latest blockchain trends or tinkering with side projects to sharpen my skills. And when I'm taking a break from tech, you can catch me playing Call of Duty Mobile 😅, cracking DSA problems, or chilling with a good movie.
+              </p>
+
+                </div>
+              </div>
+
+              <div id="skills">
+
+              </div>
+
+
     </div>
   )
 }
