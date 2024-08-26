@@ -12,7 +12,7 @@ function Layout() {
       <Home/>
 
 
-      <div style={{ position: "absolute", bottom: "45%", left: "65%", top: "30%"}}>
+      <div style={{ position: "absolute", bottom: "45%", left: "65%", top: "45%"}}>
         <ContactHome/>
       </div>
 
