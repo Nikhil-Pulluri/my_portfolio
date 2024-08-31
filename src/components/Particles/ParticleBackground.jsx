@@ -55,7 +55,7 @@ const ParticleBackground = () => {
                 },
                 modes: {
                   push: {
-                    quantity: 4,
+                    quantity: 2,
                   },
                   repulse: {
                     distance: 100,
@@ -70,7 +70,7 @@ const ParticleBackground = () => {
                 links: {
                   color: "#ffffff",
                   distance: 150,
-                  enable: false,
+                  enable: true,
                   opacity: 0.5,
                   width: 1,
                 },
@@ -81,7 +81,7 @@ const ParticleBackground = () => {
                     default: "bounce",
                   },
                   random: true,
-                  speed: 0.3,
+                  speed: 0.6,
                   straight: false,
                 },
                 number: {
@@ -89,13 +89,13 @@ const ParticleBackground = () => {
                     enable: true,
                     area: 800,
                   },
-                  value: 600,
+                  value: 200,
                 },
                 opacity: {
                   value: 0.6,
                 },
                 shape: {
-                  type: "circle",
+                  type: "square",
                 },
                 size: {
                   value: { min: 1, max: 2.3 },

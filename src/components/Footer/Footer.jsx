@@ -3,8 +3,9 @@ import React from 'react'
 function Footer() {
   return (
     <div id='footer'>
-      <div style={{color: "white", padding: "100px"}}> Footer</div>
-      <div style={{color: "white"}}>Testing the footer component</div>
+      <center>
+        <div style={{color: "white", paddingBottom: "20px"}}>&copy; 2024 Nikhil Pulluri</div>
+      </center>
     </div>
   )
 }

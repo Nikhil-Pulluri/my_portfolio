@@ -3,6 +3,7 @@ import Home from "./components/Home/Home"
 import Footer from "./components/Footer/Footer"
 import About from "./components/About/About"
 import ContactHome from "./components/Home/ContactHome"
+import Test from './components/Test'
 
 function Layout() {
 
@@ -17,20 +18,17 @@ function Layout() {
       </div>
 
 
-      <div
-      style={{backgroundColor: "#1a1a1a",height: "auto", paddingTop: "70px", marginBotton: "40px", paddingBottom: "50px"}}
+      <div id="about"
+      style={{height: "auto", marginBotton: "40px", paddingBottom: "50px"}}
       >
         <About/>
       </div>
-
-
-      <div style={{color: "white", height: "300px"}}>
-          testing
-      </div>
+      
+      <Test/>
       
 
       <div
-      style={{backgroundColor: "#1a1a1a",height: "auto", padding: "50px"}}
+      style={{backgroundColor: "#1a1a1a",height: "auto", paddingTop: "50px"}}
       >
         <Footer/>
       </div>

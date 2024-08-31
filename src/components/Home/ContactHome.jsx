@@ -1,8 +1,18 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 function ContactHome() {
+  const [show, setShow] = useState(false);
+
+  useEffect(()=> {
+    const timer = setTimeout(()=>{
+      setShow((prev)=> !prev)
+    }, 500)
+
+    return ()=> clearTimeout(timer)
+  }, [])
   return (
-    <div id='contactHome'>
+    <>
+    {show && (<div className='fadeIn' id='contactHome'>
       <center>
         <div style={{display: "flex", flexDirection: "column", gap: "25px"}}>
 
@@ -24,7 +34,7 @@ function ContactHome() {
           <div style={{display: "flex", flexDirection: "row", gap: "20px"}}>
             <div style={{display: "flex", gap: "10px"}} id="resume">
               <div><img style={{height: "25px", width: "20px"}} src="/resume.png" alt="resume" /></div>
-              <div><a href=''>Resume</a></div>
+              <div><a href='https://drive.google.com/file/d/18DpUwZN9RHheg5gYXSSCH0fHAOEwb6wc/view?usp=sharing'>Resume</a></div>
             </div>
             <div id="resume">
               <a href=''>CV</a>
@@ -33,7 +43,8 @@ function ContactHome() {
 
         </div>
       </center>
-    </div>
+    </div>)}
+    </>
   )
 }
 

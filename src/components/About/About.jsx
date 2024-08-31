@@ -1,8 +1,9 @@
 import React from 'react'
+import Skills from './Skills'
 
 function About() {
   return (
-    <div id='about'>
+    <div>
       <center>
         <h1 style={{color: "white", fontSize: "60px", fontWeight: "bold"}}>About Me</h1>
       </center>
@@ -25,10 +26,9 @@ function About() {
                 </div>
               </div>
 
-              <div id="skills">
 
-              </div>
 
+      <center style={{marginTop: "100px"}}><Skills/></center>
 
     </div>
   )
