@@ -7,8 +7,6 @@ import {useState, useEffect} from 'react'
 
 // export default function CircularProgressDeterminate(props) {
 
-// testing git push
-
 
 //   return (
 //     <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', flexWrap: 'wrap' }}>
@@ -25,13 +23,15 @@ import {useState, useEffect} from 'react'
 // }
 
 
-export default function Progress(props) {
+function Progress(props) {
 
 
   const [isLoading, setIsLoading] = React.useState(false);
 
 
   const [prof, setProf] = useState(0);
+
+  const [show, setShow] = useState(false)
 
 
   const { value: value1, reset: resetValue1 } = useCountUp({
@@ -63,6 +63,7 @@ useEffect(()=>{
     if (scrollTop > 1160) {
       // Scrolling down
       handleButtonClick(props.prof)
+      setShow(prev=>true)
     } 
 
   }
@@ -93,14 +94,14 @@ useEffect(()=>{
 
         <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', flexWrap: 'wrap' }}>
 
-             <img src={`/${props.image}`} style={{height: `${props.height}`, width: `${props.width}`}}/>
+             <img src={`/${props.image}`} style={{height: `${props.height}`, width: `${props.width}`, backgroundColor: `${props.back}`, borderRadius: `${props.border}`, padding: `${props.pad}`}}/>
 
             <CircularProgress determinate value={value1} size="md" variant="plain">
               
                 <Typography>
-                  <div style={{color: "#ffff", opacity: "1", fontSize: "13px"}}>
+                  {show && (<div style={{color: "#ffff", opacity: "1", fontSize: "13px"}}>
                   {value1}
-                  </div>
+                  </div>)}
                 </Typography>
             </CircularProgress>
 
@@ -110,4 +111,6 @@ useEffect(()=>{
 </>
   );
 }
+
+export default Progress
 

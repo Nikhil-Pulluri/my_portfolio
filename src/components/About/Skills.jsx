@@ -42,9 +42,9 @@ function Skills() {
                 {/* flex 2 */}
                 <div style={{display: "flex", flexDirection: "column", gap: "20px", alignItems: "center"}}>
                     <Progress image="mongo.svg" prof={75} height="48px" width="48px" />
-                    <Progress image="express.svg" prof={70} height="48px" width="48px" />
+                    <Progress image="express.svg" prof={70} height="48px" width="48px" back="white" border="8px" pad="2px"/>
                     <Progress image="react.svg" prof={80} height="48px" width="48px" />
-                    <Progress image="node.svg" prof={75} height="48px" width="48px" />
+                    <Progress image="node.svg" prof={75} height="48px" width="48px" back="white" border="8px" pad="2px"/>
                     <Progress image="solidity.svg" prof={75} height="48px" width="48px" />
                     <Progress image="php.svg" prof={75} height="48px" width="48px" />
                 </div>
