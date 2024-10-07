@@ -179,10 +179,12 @@ circle{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: auto;
 }
 
 #work{
   padding-top: 30px;
+  width: auto;
   /* padding-right: 30px; */
   background: rgba(26, 26, 26, 0);
   border-radius: 16px;

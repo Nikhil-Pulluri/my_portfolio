@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 function ContactHome() {
   const [show, setShow] = useState(false);
 
+
   useEffect(()=> {
     const timer = setTimeout(()=>{
       setShow((prev)=> !prev)

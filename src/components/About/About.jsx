@@ -1,5 +1,6 @@
 import React from 'react'
 import Skills from './Skills'
+import LeetCodeProfile from '../Leet'
 
 function About() {
   return (
@@ -28,7 +29,12 @@ function About() {
 
 
 
-      <center style={{marginTop: "100px", padding: "0px 130px"}}><Skills/></center>
+      <center style={{marginTop: "100px", padding: "0px 30px"}}>
+          <div >
+            <Skills/>
+            {/* <LeetCodeProfile/> */}
+          </div>
+        </center>
 
     </div>
   )
