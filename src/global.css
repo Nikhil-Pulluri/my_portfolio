@@ -16,9 +16,6 @@ body{
 #navbar{
   background-color: transparent;
   padding-top: 20px;
-  /* transition: transform 0.3s ease-in-out;
-  transform: translateY(0);  */
-  /* color: white; */
   z-index: 1;
   transition: top 0.5s;
 }
@@ -36,6 +33,7 @@ body{
   transform: rotate(-90deg);
   height: 70px;
   width: 70px;
+  /* z-index: 1; */
 }
 
 circle{
@@ -115,7 +113,8 @@ circle{
   color: white;
   font-size: 70px;
   position: absolute;
-  top: 70%;
+  top: 63%;
+  /* margin-top: 50px; */
   left: 15.3%;
 }
 
@@ -166,6 +165,43 @@ circle{
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(4.1px);
   border: 1px solid rgba(245, 245, 245, 0.197);
+}
+
+
+@media (max-width: 768px) {
+  .intro{
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    top: 68%;
+    margin-top: 50px;
+    left: 15.3%;
+  }
+
+  #about {
+    padding-top: 20px; /* Adjust padding if needed */
+    /* padding-right: 0px; */ /* Uncomment if you want to reset this */
+    background: rgba(26, 26, 26, 0.8); /* Optional adjustment for visibility */
+    border-radius: 12px; /* Adjust the border radius for smaller screens */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); /* Modify shadow for mobile */
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(245, 245, 245, 0.15); /* Optional adjustment */
+    width: 400px;
+  }
+  
+
+  #work{
+    padding-top: 30px;
+    width: 400px;
+    /* padding-right: 30px; */
+    background: rgba(26, 26, 26, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(4.1px);
+    border: 1px solid rgba(245, 245, 245, 0.197);
+  }
 }
 
 #about-outer{

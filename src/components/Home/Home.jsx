@@ -23,12 +23,12 @@ function Home() {
     <>
     <div>
     <ParticleBackground/>
-      <div> {/*adding relative position to the particle  */}
+      <div style={{display: "flex", flexDirection: "column", gap: "60px"}}> {/*adding relative position to the particle  */}
             
 
           <div id="home"  >
 
-                  
+         
 
             {show && (
               <div style={{display: "flex", flexDirection: "column", gap: "5px", marginTop: "200px"}}>
@@ -53,7 +53,7 @@ function Home() {
           <Intro/>
           </div>
 
-        </div> 
+      </div> 
 
 
     </div>
