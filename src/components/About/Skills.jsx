@@ -127,21 +127,20 @@ function Skills() {
   }}
   data={[
     {  steps: 85, label: "C++" },
-    { steps: 70, label: "Python" },
+    { steps: 60, label: "Python" },
     { steps: 70, label: "SQL" },
     { steps: 85, label: "HTML" },
     { steps: 85, label: "CSS" },
     { steps: 75, label: "JS" },
-    { steps: 70, label: "TS" },
-    { steps: 75, label: "Bootstrap" },
-    { steps: 75, label: "Tailwind" },
+    { steps: 40, label: "TS" },
+    { steps: 55, label: "Bootstrap" },
+    { steps: 60, label: "Tailwind" },
     { steps: 75, label: "MongoDB" },
-    { steps: 75, label: "React JS" },
-    { steps: 75, label: "Express JS" },
-    { steps: 75, label: "Node JS" },
-    { steps: 75, label: "Solidity" },
+    { steps: 80, label: "React JS" },
+    { steps: 45, label: "Express JS" },
+    { steps: 50, label: "Node JS" },
+    { steps: 60, label: "Solidity" },
     { steps: 75, label: "PHP" },
-    // Add more entries as needed
   ]}
   barSize={47}
   barCategoryGap="60%"
@@ -155,7 +154,7 @@ function Skills() {
   />
   {/* <YAxis domain={[0, '10']} /> */}
   <XAxis
-    dataKey="label" // Updated to use the label property
+    dataKey="label" 
     tickLine={false}
     axisLine={false}
     tickMargin={4}
@@ -166,13 +165,13 @@ function Skills() {
     if (active && payload && payload.length) {
       const { label, steps } = payload[0].payload; // Access label and steps from payload
       return (
-        <div className="tooltip bg-[#1a1a1a]  p-4 ">
-          <div>Skill : {label}</div> 
-          <div>Proficiency : {steps}</div>
+        <div className="tooltip bg-[#1a1a1a]  p-4 rounded-md">
+          <div className='font-bold'>Skill : {label}</div> 
+          <div className='font-bold'>Proficiency : {steps}</div>
         </div>
       );
     }
-    return null; // Return null if not active or payload is empty
+    return null; 
   }}
 />
 </BarChart>
