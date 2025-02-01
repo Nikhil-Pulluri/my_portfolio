@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react'
+import { motion } from 'framer-motion'
+import { GithubIcon, LinkedinIcon, TwitterIcon } from 'lucide-react'
 
 function ContactHome() {
   const [show, setShow] = useState(false);
@@ -13,9 +15,9 @@ function ContactHome() {
   }, [])
   return (
     <>
-    {show && (<div className='fadeIn' id='contactHome'>
+    {/* <div className='fadeIn' id='contactHome'>
       <center>
-        <div style={{display: "flex", flexDirection: "column", gap: "25px"}}>
+          <div style={{display: "flex", flexDirection: "column", gap: "25px"}}>
 
           <div style={{display: "flex", flexDirection: "row", gap: "20px"}}>
 
@@ -44,7 +46,34 @@ function ContactHome() {
 
         </div>
       </center>
-    </div>)}
+    </div> */}
+
+        <motion.div>
+          {/* <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8, duration: 0.5 }} className="flex items-center justify-center gap-4 mt-8">
+            <a href="https://github.com/Nikhil-Pulluri?tab=repositories">
+              <button variant="default" size="lg">
+                View Projects
+              </button>
+            </a>
+            <a href="mailto:nikhilpulluri7810@gmail.com">
+              <button variant="outline" size="lg">
+                Contact Me
+              </button>
+            </a>
+          </motion.div> */}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1, duration: 0.5 }} className="flex items-center justify-center gap-6 mt-12">
+              <a href="https://github.com/Nikhil-Pulluri" className="text-muted-foreground hover:text-white transition-colors">
+                <GithubIcon className="w-6 h-6" />
+              </a>
+              <a href="https://www.linkedin.com/in/nikhil-sri-ram-pulluri-03bb64211/" className="text-muted-foreground hover:text-white transition-colors">
+                <LinkedinIcon className="w-6 h-6" />
+              </a>
+              <a href="https://x.com/NikhilPulluri3" className="text-muted-foreground hover:text-white transition-colors">
+                <TwitterIcon className="w-6 h-6" />
+              </a>
+          </motion.div>
+        </motion.div>
+
     </>
   )
 }

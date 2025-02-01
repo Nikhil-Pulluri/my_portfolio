@@ -3,7 +3,6 @@ import Home from "./components/Home/Home"
 import Footer from "./components/Footer/Footer"
 import About from "./components/About/About"
 import Works from "./components/Works/Works"
-// import ContactHome from "./components/Home/ContactHome"
 import { useState, useEffect } from "react"
 import { animate, scroll } from "motion";
 import AboutMobile from "./components/About/AboutMobile"
@@ -82,7 +81,7 @@ function Layout() {
 
 
       <div id="about-outer">
-        <div id="about"
+        <div 
         style={{height: "auto", marginBotton: "40px", paddingBottom: "50px", padding: "0px 20px"}}
         >
           <Contact/>
@@ -91,7 +90,7 @@ function Layout() {
 
 
       <div
-      style={{backgroundColor: "#1a1a1a",height: "auto", paddingTop: "50px"}}
+      style={{height: "auto", paddingTop: "50px"}}
       >
         <Footer/>
       </div>

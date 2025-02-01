@@ -1,7 +1,7 @@
 import React, {useState,useEffect, useRef} from 'react'
 import { LinearGradient } from 'react-text-gradients'
 import ParticleBackground from '../Particles/ParticleBackground'
-import Intro from './Intro'
+// import Intro from './Intro'
 
 function Home() {
 
@@ -48,10 +48,10 @@ function Home() {
 
           </div>
 
-
+{/* 
           <div className='intro'>
           <Intro/>
-          </div>
+          </div> */}
 
       </div> 
 
