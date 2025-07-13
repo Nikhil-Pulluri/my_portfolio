@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+
+@keyframes fadeInSlow {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInSlow {
+  animation: fadeInSlow 1s ease-out forwards;
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
