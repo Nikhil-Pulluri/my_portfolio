@@ -23,7 +23,7 @@ export default function HeroSection() {
   }, [animationComplete])
 
   return (
-    <div className="relative min-h-screen bg-black text-white overflow-hidden px-6">
+    <div className="relative min-h-screen bg-black text-white overflow-hidden ">
       <div
         className={clsx(
           'transition-all duration-1000 ease-in-out absolute',
