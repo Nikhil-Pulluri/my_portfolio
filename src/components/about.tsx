@@ -4,7 +4,7 @@ import { LinkPreview } from '@/components/ui/link-preview'
 
 export function About() {
   return (
-    <div className="flex ml-[3vw] items-center">
+    <div className="flex ml-[3vw] items-center bg-[#0a0a0a]">
       <div className="flex justify-center items-start h-[40rem] flex-col px-4">
         <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl  text-left mb-10">
           Visit{' '}

@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils'
 import { IconLayoutNavbarCollapse } from '@tabler/icons-react'
 import { AnimatePresence, MotionValue, motion, useMotionValue, useSpring, useTransform } from 'motion/react'
 
-import { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 export const FloatingDock = ({
   items,
@@ -63,20 +63,69 @@ const FloatingDockMobile = ({ items, className }: { items: { title: string; icon
 const FloatingDockDesktop = ({ items, className }: { items: { title: string; icon: React.ReactNode; href: string }[]; className?: string }) => {
   let mouseY = useMotionValue(Infinity)
   const [isHovered, setIsHovered] = useState(false)
+  const [showIndicator, setShowIndicator] = useState(true)
+
+  // Hide indicator after 3 seconds
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowIndicator(false)
+    }, 3000)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <div className={cn('hidden md:block', className)}>
+      {/* Arrow indicator */}
+      <AnimatePresence>
+        {showIndicator && !isHovered && (
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{
+              opacity: [0, 1, 1, 0],
+              x: [20, 0, 0, -10],
+            }}
+            exit={{ opacity: 0, x: -10 }}
+            transition={{
+              duration: 2,
+              times: [0, 0.2, 0.8, 1],
+              repeat: Infinity,
+              repeatDelay: 1,
+            }}
+            className="fixed right-8 top-1/2 -translate-y-1/2 z-30 pointer-events-none"
+          >
+            <div className="flex items-center gap-2">
+              <span className="text-white text-sm font-medium opacity-80">Navigation</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-white">
+                <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Extended hover trigger area */}
-      <motion.div className="fixed right-0 top-0 w-24 h-full z-40" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} />
+      <motion.div
+        className="fixed right-0 top-0 w-24 h-full z-40"
+        onMouseEnter={() => {
+          setIsHovered(true)
+          setShowIndicator(false)
+        }}
+        onMouseLeave={() => setIsHovered(false)}
+      />
 
       {/* Dock container */}
       <motion.div
-        onMouseMove={(e) => mouseY.set(e.pageY)}
+        // onMouseMove={(e) => mouseY.set(e.pageY)}
+        onMouseMove={(e) => mouseY.set(e.clientY)}
         onMouseLeave={() => {
           mouseY.set(Infinity)
           setIsHovered(false)
         }}
-        onMouseEnter={() => setIsHovered(true)}
+        onMouseEnter={() => {
+          setIsHovered(true)
+          setShowIndicator(false)
+        }}
         initial={{ x: '100%' }}
         animate={{ x: isHovered ? '0%' : '100%' }}
         transition={{

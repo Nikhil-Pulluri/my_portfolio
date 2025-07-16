@@ -44,7 +44,6 @@ export function FloatingDockDemo() {
   ]
   return (
     <div className="flex items-center justify-center  w-full">
-      {/* No need for positioning classes anymore - it's handled internally */}
       <FloatingDock items={links} />
     </div>
   )
