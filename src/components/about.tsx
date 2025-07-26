@@ -4,26 +4,30 @@ import { LinkPreview } from '@/components/ui/link-preview'
 
 export function About() {
   return (
-    <div className="flex ml-[3vw] items-center bg-[#0a0a0a]">
-      <div className="flex justify-center items-start h-[40rem] flex-col px-4">
-        <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl  text-left mb-10">
-          Visit{' '}
-          <LinkPreview url="https://ui.aceternity.com" className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500">
-            Aceternity UI
-          </LinkPreview>{' '}
-          and for amazing Tailwind and Framer Motion components.
-        </p>
-        <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl  text-left ">
-          I listen to{' '}
-          <LinkPreview url="https://www.youtube.com/watch?v=S-z6vyR89Ig&list=RDMM&index=3" imageSrc="/images/imraan-hashmi.jpeg" isStatic className="font-bold">
+    <div className="flex h-full mt-1 ml-[3vw] items-start bg-[#0a0a0a] text-white">
+      <div className="flex flex-col justify-center h-[40rem] px-4 w-3/5">
+        <p className="text-neutral-400 text-justify text-xl md:text-3xl max-w-3xl mb-10">
+          Hola! I'm <span className="text-white">Nikhil Pulluri</span>. I don't just write code; I <span className="italic">sculpt digital experiences</span> as a{' '}
+          <span className="text-white">Full Stack & Web3 Developer</span>. My craft is weaving intuitive front-ends with robust back-ends, creating secure and modern applications with{' '}
+          <LinkPreview url="https://www.typescriptlang.org/">TypeScript</LinkPreview>, <LinkPreview url="https://nextjs.org/">Next.js</LinkPreview>, and{' '}
+          <LinkPreview url="https://nestjs.com/">Nest.js</LinkPreview>.
+          <br />
+          <br />
+          Off the digital loom, I'm often refining side projects, immersed in{' '}
+          <LinkPreview url="https://www.youtube.com/watch?v=S-z6vyR89Ig&list=RDMM&index=3" imageSrc="/images/imraan-hashmi.jpeg" isStatic>
             this guy
-          </LinkPreview>{' '}
-          and I watch{' '}
-          <LinkPreview url="/templates" imageSrc="/images/fight-club.jpeg" isStatic className="font-bold">
+          </LinkPreview>
+          , or captivated by{' '}
+          <LinkPreview url="/templates" imageSrc="/images/fight-club.jpeg" isStatic>
             this movie
-          </LinkPreview>{' '}
-          twice a day
+          </LinkPreview>
+          .
         </p>
+      </div>
+
+      <div className="flex flex-col justify-center items-center w-2/5 h-[35rem]">
+        <h1 className="text-6xl md:text-8xl font-extrabold text-white">About</h1>
+        <h1 className="text-6xl md:text-8xl font-extrabold text-white">Me?</h1>
       </div>
     </div>
   )

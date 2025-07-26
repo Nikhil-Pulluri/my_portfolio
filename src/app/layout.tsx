@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
 import ClientLayer from '@/wrappers/layer-client_support'
+import { FloatingDockDemo } from '@/components/navDock'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${jetBrainsMono.className} antialiased`}>
         <ClientLayer>{children}</ClientLayer>
+        <FloatingDockDemo />
       </body>
     </html>
   )
