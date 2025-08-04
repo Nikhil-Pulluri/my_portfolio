@@ -19,7 +19,7 @@ export function About() {
           </LinkPreview>
           , or captivated by{' '}
           <LinkPreview url="/templates" imageSrc="/images/fight-club.jpeg" isStatic>
-            this movie
+            this z
           </LinkPreview>
           .
         </p>
